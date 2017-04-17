@@ -1,0 +1,22 @@
+\section{Exchange}
+% Some of the classic neighborhood functions used in Local Search are the 3-exchange and the 2-exchange
+% neighborhoods. A 3-exchange neighborhood rotates the value of 3 variables between each other e.g.
+% given the variables x1=1, x2=2 and x3=3 if we apply 3-exchange(x1,x2,x3) we would have as a result x1=3,
+% x2=1 and x3=2. The 2-exchange neighborhood is instead equivalent to swapping the values of two
+% variables.
+% Assume you wrote a local search algorithm with a neighborhood function F that alternates between
+% applying the 3-exchange and the 2-exchange neighborhood (thus a 3-exchange always must be followed
+% by a 2-exchange and vice versa). Consider a problem with n decision variables x1, x2, …, xn each with the
+% domain {1,2,…,n}, where a valid assignment satisfies the allDiff constraint (i.e., xi ≠ xj for i ≠ j and i,j ∈
+% {1,2,…,n} ). Give a proof (a careful argument) that F is complete for this problem (i.e., that we can reach
+% an arbitrary valid assignment from any initial valid assignment). You can assume that the number of
+% variables is larger than 2.
+
+
+
+
+To show that applying 
+
+
+
+Figure 1 shows a decision problem with three variables. There are $N!$ possible assignments of the variables, so when $N = 3$ there are $6$ possible assignments. The yellow circle shows an arbitrary starting assignment, and the arrows represents applying the 3-exchange and 2-exchange neighborhood functions. By following the arrows, we see that all possible assignments are reachable.
