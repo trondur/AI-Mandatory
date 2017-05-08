@@ -17,8 +17,10 @@ $D_1 = \{2\}, D_2 = \{8\}, D_4 = \{4\}, D_4 = \{0, 2\}, D_5 = \{1\}$
 $X_1 = 1, X_2 = 8, X_3 = 4, X_4 = 0, X_5 = 2$
 
 \subsection{3}
+
 \begin{itemize}
-	\item Apply the Revise function to all arcs in the tree from the bottom up.
-	\item Assign the
-	\item
+	\item Apply revise to all arcs from the bottom up.
+	\item Assign the root variable to any value in its current domain and further shrink its domain to only one value -- the one we assigned to it.
+	\item Apply revise to all arcs from the root node.
+	\item Repeat step 2 and 3 for all the root nodes children until we reach the bottom of the tree.
 \end{itemize}

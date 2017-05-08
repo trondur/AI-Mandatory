@@ -42,5 +42,21 @@ $(x+1, C_2)$ \\
 \end{enumerate}
 
 \section*{3)}
+I don't really understand the question, so i will try to answer both my interpretations of them.
+
+Let us consider two corner points in a $n$-hypercube $A=(a_1, a_2, ..., a_n)$ and $B=(b_1, b_2, ..., b_n)$
+
+If the two corners are adjacent, only one pivot is needed to reach to other corner, as increasing a slack variable to its maximum is equivalent to traveling along one of the inequalities from one corner point to another.
+
+If on the other hand the two corner points are as far as possible from each other a minimum of $n$ pivots are needed to travel from $A$ to $B$. This can be observed when we consider a unit hypercube, where we need to travel at least once along every dimension to reach the corner point furthest away.
 
 \section*{4)}
+It \textit{is} possible to define an objective, maximize $\sum_{j=1}^{\infty} c_j x_j$. An example of this is when a degenerate problem creates a cycle, and the simplex algorithm does not terminate. It is however possible to implement cycle breaking in simplex, but it is often not done, as cyclic degenerate problems are rare. A degenerate example:\footnote{The example is taken from the slides from lecture 12}\\
+
+\noindent
+$x_5 = -0.5x_1 + 5.5x_2 + 2.5x_3 - 9x_4$\\ 
+$x_6 = -0.5x_1 + 1.5x_2 + 0.5x_3 - x_4$\\
+$x_7 = 1 - x_1$\\
+$z = 10x_1 - 57x_2 - 9x_3 - 24x_4$
+
+
